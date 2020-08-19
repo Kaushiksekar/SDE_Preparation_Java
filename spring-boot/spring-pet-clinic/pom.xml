@@ -15,7 +15,7 @@
 	</parent>
 	<groupId>com.tutorials.springboot</groupId>
 	<artifactId>spring-pet-clinic</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-pet-clinic</name>
 	<description>Spring Pet Clinic</description>
 
@@ -23,9 +23,7 @@
 		<java.version>11</java.version>
 	</properties>
 
-	<dependencies>
 
-	</dependencies>
 
 	<build>
 		<plugins>
@@ -33,7 +31,21 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<configuration>
+					<!-- overriding deploy functionality with install -->
+					<goals>install</goals>
+					<autoVersionSubmodules>true</autoVersionSubmodules>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
+
+	<scm>
+		<developerConnection>scm:git:https://github.com/Kaushiksekar/SDE_Preparation_Java.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
 
 </project>
