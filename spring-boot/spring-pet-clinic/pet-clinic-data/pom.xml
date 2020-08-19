@@ -11,6 +11,12 @@
 
     <artifactId>pet-clinic-data</artifactId>
 
+    <properties>
+        <!-- This is to make thin jar instead of fat jat in spring 2.0. We will make data as thin
+         and have web as fat and web contains data anyway -->
+        <spring-boot.repackage.skip>true</spring-boot.repackage.skip>
+    </properties>
+
     <dependencies>
 
         <dependency>
@@ -55,9 +61,6 @@
                         <goals>
                             <goal>repackage</goal>
                         </goals>
-                        <configuration>
-                            <skip>true</skip>
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>
