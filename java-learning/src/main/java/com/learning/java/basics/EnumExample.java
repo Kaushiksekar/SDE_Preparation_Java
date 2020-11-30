@@ -5,7 +5,7 @@ enum Direction{
 
     private int angle;
 
-    Direction(int angle) {
+    private Direction(int angle) {
         this.angle = angle;
     }
 

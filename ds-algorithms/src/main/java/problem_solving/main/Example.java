@@ -18,6 +18,11 @@ public class Example {
 
         new ArrayList<ArrayList<String>>();
 
+        List<Integer> a =new ArrayList<>();
+        a.add(1);
+        System.out.println("******");
+        System.out.println(a.indexOf(2));
+
 
     }
 

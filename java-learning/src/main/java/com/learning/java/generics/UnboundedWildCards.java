@@ -19,6 +19,10 @@ public class UnboundedWildCards {
         // this is called upper bound wildcard as we place an upper limit on the type
         // Number is the upper most limit here. Hence string is not valid
 
+        List<Integer> listBase = new ArrayList<>() {{add(1); add(2);}};
+        List<? super Integer> list = listBase;
+        list.add(1);
+
     }
 
     static Number sum(List<? extends Number> list){
