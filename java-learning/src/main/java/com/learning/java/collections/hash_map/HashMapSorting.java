@@ -1,8 +1,6 @@
 package com.learning.java.collections.hash_map;
 
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 
 public class HashMapSorting {
 
@@ -11,9 +9,9 @@ public class HashMapSorting {
         Map<String, Integer> unsortMap = new HashMap<>();
         unsortMap.put("alex", 1);
         unsortMap.put("david", 2);
+        unsortMap.put("brian", 5);
         unsortMap.put("elle", 3);
         unsortMap.put("charles", 4);
-        unsortMap.put("brian", 5);
 
         LinkedHashMap<String, Integer> sortedMap = new LinkedHashMap<>();
         unsortMap.entrySet().stream().sorted(Map.Entry.comparingByKey())
@@ -25,6 +23,13 @@ public class HashMapSorting {
             System.out.println(integer);
         });
 
+        List<Map.Entry<String, Integer>> list = new ArrayList<>(unsortMap.entrySet());
+        Collections.sort(list, (o1, o2) -> o1.getValue().compareTo(o2.getValue()));
+        list.forEach(stringIntegerEntry -> {
+            System.out.println(stringIntegerEntry.getKey() + " - " + stringIntegerEntry.getValue());
+        });
+
+        list.iterator();
     }
 
 }

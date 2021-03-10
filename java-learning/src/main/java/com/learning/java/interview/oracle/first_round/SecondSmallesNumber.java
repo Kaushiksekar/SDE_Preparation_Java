@@ -1,4 +1,4 @@
-package com.learning.java.interview;
+package com.learning.java.interview.oracle.first_round;
 
 public class SecondSmallesNumber {
 
